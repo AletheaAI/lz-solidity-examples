@@ -3,12 +3,12 @@
 pragma solidity ^0.8.2;
 
 import "./IONFT721CoreUpgradeable.sol";
-import "../../../lzApp/NonblockingLzAppUpgradeable.sol";
+import "../../../lzApp/NonblockingLzAppUpgradeableOwnable.sol";
 import "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol";
 
 
-abstract contract ONFT721CoreUpgradeable is Initializable, NonblockingLzAppUpgradeable, ERC165Upgradeable, ReentrancyGuardUpgradeable, IONFT721CoreUpgradeable {
+abstract contract ONFT721CoreUpgradeable is Initializable, NonblockingLzAppUpgradeableOwnable, ERC165Upgradeable, ReentrancyGuardUpgradeable, IONFT721CoreUpgradeable {
     uint16 public constant FUNCTION_TYPE_SEND = 1;
 
     struct StoredCredit {

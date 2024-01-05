@@ -3,10 +3,10 @@
 pragma solidity ^0.8.0;
 
 import "./IONFT1155CoreUpgradeable.sol";
-import "../../../lzApp/NonblockingLzAppUpgradeable.sol";
+import "../../../lzApp/NonblockingLzAppUpgradeableOwnable.sol";
 import "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol";
 
-abstract contract ONFT1155CoreUpgradeable is Initializable, NonblockingLzAppUpgradeable, ERC165Upgradeable, IONFT1155CoreUpgradeable {
+abstract contract ONFT1155CoreUpgradeable is Initializable, NonblockingLzAppUpgradeableOwnable, ERC165Upgradeable, IONFT1155CoreUpgradeable {
     uint public constant NO_EXTRA_GAS = 0;
     uint16 public constant FUNCTION_TYPE_SEND = 1;
     uint16 public constant FUNCTION_TYPE_SEND_BATCH = 2;

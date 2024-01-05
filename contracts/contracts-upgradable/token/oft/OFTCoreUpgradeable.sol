@@ -4,9 +4,9 @@ pragma solidity ^0.8.2;
 
 import "./IOFTCoreUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol";
-import "../../lzApp/NonblockingLzAppUpgradeable.sol";
+import "../../lzApp/NonblockingLzAppUpgradeableOwnable.sol";
 
-abstract contract OFTCoreUpgradeable is Initializable, NonblockingLzAppUpgradeable, ERC165Upgradeable, IOFTCoreUpgradeable {
+abstract contract OFTCoreUpgradeable is Initializable, NonblockingLzAppUpgradeableOwnable, ERC165Upgradeable, IOFTCoreUpgradeable {
     using BytesLib for bytes;
 
     uint public constant NO_EXTRA_GAS = 0;
